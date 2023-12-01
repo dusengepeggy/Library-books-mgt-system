@@ -61,14 +61,31 @@ const updateMany=(id,obj)=>{
         console.log("Book list now:\n");
         console.log(booksDatabase);
     }
+};
+
+const findItemWithProperty=(key,value)=>{
+
+    console.log("\n6.FUNCTION TO RETURN BOOKS WITH THE GIVE PROPERTIES ----------------------------------------------------------------------------------\n");
+    var answer=booksDatabase.filter(ele=>ele[key]===value);
+    console.log(`BOOKS WITH ${key} EQUAL TO ${value} ARE :`);
+    console.log(answer);
+};
+
+const displayAllBooknames=()=>{
+   
+    console.log("\n7.FUNCTION TO DISPLAY ALL BOOK NAMES IN THE DB----------------------------------------------------------------\n");
+    console.log("Books names list :\n");
+    booksDatabase.forEach(ele=>console.log(ele["title"]));
+       
+    
 }
-
-
 
 module.exports={
     add,
     remove,
     displayAll,
     update,
-    updateMany
+    updateMany,
+    findItemWithProperty,
+    displayAllBooknames
 }
