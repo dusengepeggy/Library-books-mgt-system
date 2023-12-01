@@ -1,4 +1,4 @@
-const {add,remove,displayAll,update,updateMany}=require("./controller/controlFunctions");
+const {add,remove,displayAll,update,updateMany,findItemWithProperty,displayAllBooknames}=require("./controller/controlFunctions");
 
 const newBook={
     title: 'Hired to love', 
@@ -21,3 +21,6 @@ const toBeUpdated={
 
 updateMany(2,toBeUpdated);
 
+findItemWithProperty("year",2005);
+
+displayAllBooknames();
